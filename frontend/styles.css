@@ -1,0 +1,129 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to right, #d7d19f, #cfcc9f, #bdc7a5, #acbfab, #acbfab, #8eb6ae);
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER */
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 560px;
+    height: 660px;
+    border: 10px solid #1a1f23;
+    margin-top: 20px;
+}
+
+/* HEADER */
+.header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 80px 0 0 0;
+}
+
+.description-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+/* INPUT */
+.container-task-input {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.task-input {
+    width: 400px;
+    height: 25px;
+}
+
+.container-add-task {
+    border: 2px solid #12261a;
+    border-radius: 5px;
+    width: 40px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.container-add-task:hover {
+    border-radius: initial;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+}
+
+/* CONTAINER BTN ITEMS */
+.container-todoItems {
+    display: grid;
+    grid-template-columns: 70px 50px 1fr;
+    margin-top: 15px;
+    margin-left: 50px;
+    gap: 10px;
+}
+
+/* BTN */
+.container-deleteTaskButton {
+    border: 2px solid #844742;
+    border-radius: 2px;
+    height: 35px;
+    width: 65px;
+    cursor: pointer;
+}
+
+.deleteTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #bb3e3e;
+}
+
+.container-editTaskButton {
+    border: 2px solid #483e1b;
+    border-radius: 2px;
+    height: 35px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.editTaskButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #7f6e42;
+}
+
+/* ITEMS */
+.todo-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
