@@ -1,2 +1,2 @@
 const tasksArray = [];
-export default tasksArray;
+module.exports = tasksArray;

@@ -2,8 +2,6 @@ const addBtn = document.getElementById('addBtn');
 const input = document.querySelector('input');
 const containerTodoItems = document.querySelector('.container-todoItems');
 
-import PostController from "./PostController.js";
-
 addBtn.addEventListener('click', () => {
     const inputValue = input.value.trim();
 
@@ -39,7 +37,3 @@ addBtn.addEventListener('click', () => {
     }
 });
 
-
-addBtn.addEventListener('click', () => {
-
-});

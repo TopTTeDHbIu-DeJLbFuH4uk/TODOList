@@ -1,14 +1,11 @@
-// noinspection DuplicatedCode
-import tasksArray from "./database.js";
-import { v4 as uuidv4 } from 'uuid';
-
-
+const tasksArray = require('./database.js');
+const uuid = require('uuid');
 
 class PostController {
     async create(req, res) {
         try {
             const newTask = req.body;
-            newTask.id = uuidv4();
+            newTask.id = uuid.v4();
             tasksArray.push(newTask);
             res.json(newTask);
         } catch (error) {
@@ -67,4 +64,4 @@ class PostController {
     };
 
 }
-export default new PostController();
+module.exports = new PostController();
