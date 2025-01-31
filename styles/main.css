@@ -1,0 +1,29 @@
+* {
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #d7d19f, #cfcc9f, #bdc7a5, #acbfab, #acbfab, #8eb6ae);
+    height: 100vh;
+}
+
+h1, h2,
+h3, h4,
+h5, h6,
+p {
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,10 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+    <title>TODOList</title>
+    <link rel="icon" href="./assets/logo.svg">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-$END$
+
+<main class="container">
+    <section class="todo-list">
+        <h1 class="title">Todo list</h1>
+        <p class="description">A simple todo list app using I don't know, that it using</p>
+
+        <form class="addition-field-container">
+            <input type="text"
+                   placeholder="Enter the task"
+                   class="input-field"
+            >
+            <button type="submit" class="add-task-btn">Add</button>
+        </form>
+
+        <ul class="list-of-tasks">
+            <li class="task-container">
+                <button class="control-btn btn-delete">Delete</button>
+                <button class="control-btn btn-edit">Edit</button>
+
+                <p class="task">Example task</p>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<script src="scripts/index.js"></script>
 </body>
 </html>
