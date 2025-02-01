@@ -34,7 +34,6 @@ const addTaskToDatabase = task => {
     const newTask = {
         id: database.length + 1,
         task: task,
-        completed: false,
     };
     database.push(newTask);
     localStorage.setItem('tasks', JSON.stringify(database));
