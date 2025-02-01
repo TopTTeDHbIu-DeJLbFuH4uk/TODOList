@@ -100,8 +100,10 @@
     height: 100%;
 
     overflow-y: auto;
+
     scrollbar-width: thin;
-    scrollbar-color: #4CAF50 #b7dbbb;
+    scrollbar-color: #6b5b4b #cdc5b4;
+    scrollbar-gutter: stable;
 }
 
 .task-container {
@@ -123,24 +125,52 @@
 
     cursor: pointer;
 }
+.control-btn:hover {
+    border-radius: 5px;
+}
+
 .btn-delete {
     min-width: 85px;
     min-height: 35px;
     border: 2px solid #844742;
 
+    transition: all .15s ease-in-out;
     color: #bb3e3e;
 }
+.btn-delete:hover {
+    background-color: #844742;
+    color: #ffffff;
+}
+
 .btn-edit {
     min-width: 50px;
     min-height: 35px;
     border: 2px solid #483e1b;
 
+    transition: all .15s ease-in-out;
     color: #7f6e42;
 }
-.control-btn:hover {
-    border-radius: 5px;
+.btn-edit:hover {
+    background-color: #483e1b;
+    color: #ffffff;
 }
 
 .task {
+    position: relative;
+
     font-size: 20px;
+    cursor: pointer;
+}
+.task:hover::before {
+    transform: scale(1,1);
+}
+.task::before {
+    position: absolute;
+    bottom: 0;
+    content: '';
+
+    border-bottom: 1px solid #000;
+    transform: scale(0,1);
+    width: 100%;
+    transition: transform .3s;
 }
