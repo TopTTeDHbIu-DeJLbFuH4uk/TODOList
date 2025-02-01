@@ -24,22 +24,38 @@ const addTask = task => {
     li.append(buttonEdit);
     li.append(p);
 
-    inputFiledEl.value = '';
+    buttonDelete.addEventListener('click', () => deleteTask(li, p));
+    buttonEdit.addEventListener('click', () => editTask(p));
 
-    buttonDelete.addEventListener('click', () => deleteTask(li));
-    buttonEdit.addEventListener('click', () => editTask(li, p));
+    resetInput();
 };
 
-const editTask = (taskContainerEl, taskEl) => {
+const addTaskToDatabase = task => {
+    const newTask = {
+        id: database.length + 1,
+        task: task,
+        completed: false,
+    };
+    database.push(newTask);
+    localStorage.setItem('tasks', JSON.stringify(database));
+};
+
+const editTask = taskEl => {
     inputFiledEl.value = taskEl.innerText;
     addTaskBtn.innerText = 'Save';
 
     currentTask = taskEl;
 };
 
-const deleteTask = taskContainer => {
-    taskContainer.remove();
+const deleteTask = (taskContainerEl, taskEl) => {
+    taskContainerEl.remove();
     resetInput();
+
+    const taskIndex = database.findIndex(t => t.task === taskEl.innerText)
+    if (taskIndex !== -1) {
+        database.splice(taskIndex, 1);
+        localStorage.setItem('tasks', JSON.stringify(database));
+    }
 }
 
 addTaskBtn.addEventListener('click', e => {
@@ -48,12 +64,21 @@ addTaskBtn.addEventListener('click', e => {
     if (!inputFiledEl.value) return;
 
     if (currentTask) {
+        const taskIndex = database.findIndex(t => t.task === currentTask.innerText);
         currentTask.innerText = inputFiledEl.value;
+
+        if (taskIndex !== -1) {
+            database[taskIndex].task = currentTask.innerText;
+            localStorage.setItem('tasks', JSON.stringify(database));
+        }
+
         resetInput();
 
     } else {
         const task = inputFiledEl.value;
+
         addTask(task);
+        addTaskToDatabase(task);
     }
 });
 
