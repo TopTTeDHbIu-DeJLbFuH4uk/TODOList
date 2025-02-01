@@ -159,6 +159,7 @@
     position: relative;
 
     font-size: 20px;
+    word-break: break-word;
     cursor: pointer;
 }
 .task:hover::before {
