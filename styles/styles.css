@@ -1,6 +1,7 @@
 .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 
     box-sizing: border-box;
@@ -162,9 +163,24 @@
     word-break: break-word;
     cursor: pointer;
 }
+
+.author {
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+    font-size: 12px;
+    color: #000;
+
+    padding-top: 10px;
+}
+
+.author:hover::before,
 .task:hover::before {
     transform: scale(1,1);
 }
+.author::before,
 .task::before {
     position: absolute;
     bottom: 0;
